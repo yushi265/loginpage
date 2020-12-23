@@ -1,7 +1,7 @@
 <?php
 /**
  * XSS対策：エスケープ処理
- * 
+ *
  * @param string $str 対象の文字列
  * @return string 処理された文字列
  */
@@ -19,7 +19,6 @@ function setToken() {
     //フォームからそのトークンを送信
     //送信後の画面でそのトークンを照会
     //トークンを削除
-    session_start();
     $csrf_token = bin2hex(random_bytes(32));
     $_SESSION['csrf_token'] = $csrf_token;
 

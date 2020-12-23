@@ -80,6 +80,28 @@ class UserLogic {
             return false;
         }
     }
+
+    /**
+     * ログインチェック
+     * @param void
+     * @return bool $result
+     */
+    public static function checkLogin() {
+        $result = false;
+
+        //セッションにログインユーザーが入っていなかったらfalse
+        if(isset($_SESSION['login_user']) && $_SESSION['login_user']['id'] > 0) {
+            return $result = true;
+        }
+    }
+
+    /**
+     * ログアウト処理
+     */
+    public static function logout() {
+        $_SESSION = array();
+        session_destroy();
+    }
 }
 
 ?>
