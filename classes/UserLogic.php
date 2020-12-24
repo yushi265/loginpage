@@ -103,5 +103,5 @@ class UserLogic {
         session_destroy();
     }
 }
-
+//何でもないよ
 ?>

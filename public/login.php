@@ -29,7 +29,6 @@ if(!$result) {
     return;
 }
 
-
 ?>
 
 <!DOCTYPE html>
